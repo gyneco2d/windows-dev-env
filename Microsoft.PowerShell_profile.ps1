@@ -9,11 +9,11 @@ $symbol = if (-not(([Security.Principal.WindowsPrincipal]`
 
 function prompt() {
     if ($?) {
-        Write-Host "["(Get-Location)"]"
+        Write-Host "`r`n["(Get-Location)"]" -ForegroundColor "DarkCyan"
         Write-Host "(*'-') " -NoNewline -ForegroundColor "Green"
         return $symbol
     } else {
-        Write-Host "["(Get-Location)"]"
+        Write-Host "`r`n["(Get-Location)"]" -ForegroundColor "DarkCyan"
         Write-Host "(*;-;) " -NoNewline -ForegroundColor "Red"
         return $symbol
     }
